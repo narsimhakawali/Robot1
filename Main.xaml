@@ -108,7 +108,7 @@
       </ui:InputDialog.Result>
     </ui:InputDialog>
     <ui:LogMessage DisplayName="Log Message - Finalize " sap:VirtualizedContainerService.HintSize="433.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Clothing Consultant bot is ran sucsessfully.&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: narsimhakawali/Robot1" sap:VirtualizedContainerService.HintSize="433.6,579.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: narsimhakawali/Robot1" sap:VirtualizedContainerService.HintSize="433.6,579.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -120,7 +120,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - City Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Text="[&quot;The weather in&quot; + &quot; &quot; + CityName + &quot;[k(enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into - Google search bar" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" ScopeIdentifier="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Text="[&quot;The weather in&quot; + &quot; &quot; + CityName]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="635, 453, 554, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='gLFyf gsfi' aaname='Search' /&gt;" Guid="24882d77-f931-4976-94dc-f876703621c0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi4AAAAvCAYAAADEiUFTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD5SURBVHhe7daxCYAwAABBR1HI/nOJ4AyxS+MCebjiql/gj/MaEwCgwLgAABnGBQDIMC4AQIZxAQAyjAsAkGFcAIAM4wIAZBgXACDDuAAAGcYFAMgwLgBAhnEBADKMCwCQscblft5fBADYiXEBADKMCwCQYVwAgAzjAgBkGBcAIMO4AAAZxgUAyDAuAECGcQEAMowLAJBhXACADOMCAGQYFwAgw7gAABnGBQDIMC4AQIZxAQAyjAsAkGFcAIAM4wIAZBgXACBjjQsAwO6MCwCQYVwAgAzjAgBkGBcAIMO4AAAZxgUAyDAuAECGcQEAMowLAJBhXACAiDE/FX2yl0Es3hEAAAAASUVORK5CYII=" InformativeScreenshot="2307a54282a8e9b99936c4e2197dcf0a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
