@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,1343.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,1405.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
       <x:String>System.Activities</x:String>
@@ -84,7 +84,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence - Clothing Consultant" sap:VirtualizedContainerService.HintSize="496,1278.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This is the main file" DisplayName="Main Sequence - Clothing Consultant" sap:VirtualizedContainerService.HintSize="496,1340.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="CityName" />
       <Variable x:TypeArguments="x:String" Default="https://www.google.com/" Name="Url" />
@@ -92,9 +92,16 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - Initialize" sap:VirtualizedContainerService.HintSize="433.6,102.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Clothing Consultant bot is runnig&quot;]" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="Log the events" DisplayName="Log Message - Initialize" sap:VirtualizedContainerService.HintSize="433.6,133.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Clothing Consultant bot is runnig&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
     <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog - Input City Name" sap:VirtualizedContainerService.HintSize="433.6,251.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the City Name" Title="Get the Weather">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[CityName]</OutArgument>
@@ -113,9 +120,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Text="[&quot;Weather in the &quot;+ CityName+ &quot; in celcius&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into - City Name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4c1cbc09-1bb7-4f1f-90c4-0b126b77acce" Text="[&quot;The weather in&quot; + &quot; &quot; + CityName + &quot;[k(enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="635, 453, 554, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='gLFyf gsfi' aaname='Search' /&gt;" Guid="5d5b88c0-1fcc-4de9-9afc-829559479c35" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi4AAAAvCAYAAADEiUFTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADmSURBVHhe7dZBDQAgDAAxpEAy/xaHjkv6qIee+2YBAArEBQDIEBcAIENcAIAMcQEAMsQFAMgQFwAgQ1wAgAxxAQAyxAUAyBAXACBDXACADHEBADLEBQDIEBcAIENcAIAMcQEAMsQFAMgQFwAgQ1wAgAxxAQAyxAUAyBAXACBDXACADHEBADLEBQDIEBcAIENcAIAMcQEAMsQFAMgQFwAgQ1wAgAxxAQAyxAUAyBAXACBDXACADHEBADLEBQDIEBcAIENcAIAMcQEAMsQFAMgQFwAgQ1wAgAxxAQAyxAUAyBAXACBi9gNnn37bJ0DfpAAAAABJRU5ErkJggg==" InformativeScreenshot="0f46f4b35eb3b252bdc0080acfba25e1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="635, 453, 554, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='gLFyf gsfi' aaname='Search' /&gt;" Guid="24882d77-f931-4976-94dc-f876703621c0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAi4AAAAvCAYAAADEiUFTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD5SURBVHhe7daxCYAwAABBR1HI/nOJ4AyxS+MCebjiql/gj/MaEwCgwLgAABnGBQDIMC4AQIZxAQAyjAsAkGFcAIAM4wIAZBgXACDDuAAAGcYFAMgwLgBAhnEBADKMCwCQscblft5fBADYiXEBADKMCwCQYVwAgAzjAgBkGBcAIMO4AAAZxgUAyDAuAECGcQEAMowLAJBhXACADOMCAGQYFwAgw7gAABnGBQDIMC4AQIZxAQAyjAsAkGFcAIAM4wIAZBgXACBjjQsAwO6MCwCQYVwAgAzjAgBkGBcAIMO4AAAZxgUAyDAuAECGcQEAMowLAJBhXACAiDE/FX2yl0Es3hEAAAAASUVORK5CYII=" InformativeScreenshot="2307a54282a8e9b99936c4e2197dcf0a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Google' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
           </Sequence>
